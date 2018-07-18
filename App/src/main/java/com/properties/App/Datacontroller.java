@@ -3,6 +3,7 @@ package com.properties.App;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.RepaintManager;
@@ -24,17 +25,18 @@ public class Datacontroller {
 	public String addData() throws Exception
 	{
 //		DataFromFile d=new DataFromFile();
-//		List<DataModel> a;
+		List<DataModel> list=new ArrayList<DataModel>();
 //		a=d.getData();
 //		System.out.println("result"+a);
 //	dataRepository.saveAll(a);
-		DataModel s=new DataModel();
+		
 		try {
 			File file = new File("/home/dev/snap/skype/common/retail-banking.properties");
 			FileReader fileReader = new FileReader(file);
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			while ((line = bufferedReader.readLine()) != null) {
+				DataModel s=new DataModel();
 				if(!line.startsWith("#")&& !line.isEmpty())
 				{
 					if(line.contains("="))
@@ -49,11 +51,14 @@ public class Datacontroller {
 						}
 						else
 							s.setValues(null);
-						dataRepository.save(s);
+						list.add(s);
 					};
 				}
+				
 			}
+			
 			fileReader.close();
+			dataRepository.saveAll(list);
 		}
 		catch(Exception e)
 		{
