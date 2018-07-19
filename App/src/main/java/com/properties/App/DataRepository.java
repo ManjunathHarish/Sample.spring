@@ -19,4 +19,8 @@ public interface DataRepository extends CrudRepository<DataModel, Long> {
 
 	List<DataModel> findByChannelCode(String channelCode);
 
+	List<DataModel> findByBotIntIdAndRuleCode(int botIntId, String ruleCode);
+
+	List<DataModel> findByBotIntIdAndRuleCodeAndChannelCode(int botIntId, String ruleCode, String channelCode);
+
 }

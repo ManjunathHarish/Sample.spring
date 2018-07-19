@@ -32,15 +32,8 @@ public class Datacontroller {
 	}
 	
 	@GetMapping(path="/all")
-	public @ResponseBody Iterable<DataModel> getAllUsers() {
-		return dataRepository.findAll();
-	}
-	
-	@RequestMapping(path="/rulecode/{rule_code}",method=RequestMethod.GET)
-	public List<DataModel> getByuser(@PathVariable("rule_code") String rule_code)
-	{
-		List<DataModel> data=dataRepository.findByRuleCode(rule_code);
-		return data;
+	public @ResponseBody List<DataModel> getAllRecords() {
+		return (List<DataModel>) dataRepository.findAll();
 	}
 	
 	@GetMapping(path="botIntId/{botIntId}")
@@ -81,6 +74,20 @@ public class Datacontroller {
 	public List<DataModel> getByChannelCode(@PathVariable("channelCode") String channelCode)
 	{
 		List<DataModel> data=dataRepository.findByChannelCode(channelCode);
+		return data;
+	}
+	//by multiple parameters
+	@GetMapping(path="botIdRuleCode/{botIntId}/{RuleCode}")
+	public List<DataModel> getByBotIdRuleCode(@PathVariable("botIntId") int botIntId,@PathVariable("RuleCode") String RuleCode )
+	{
+		List<DataModel> data=dataRepository.findByBotIntIdAndRuleCode(botIntId,RuleCode);
+		return data;
+	}
+	
+	@GetMapping(path="botIdRuleCodeChannelCode/{botIntId}/{RuleCode}/{channelCode}")
+	public List<DataModel> getByBotIdRuleCodeChannelCode(@PathVariable("botIntId") int botIntId,@PathVariable("RuleCode") String RuleCode, @PathVariable("channelCode") String channelCode)
+	{
+		List<DataModel> data=dataRepository.findByBotIntIdAndRuleCodeAndChannelCode(botIntId,RuleCode,channelCode);
 		return data;
 	}
 	public void getDataAndStoreInDb()
