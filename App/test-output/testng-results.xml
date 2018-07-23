@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="1999" started-at="2018-07-21T04:46:20Z" finished-at="2018-07-21T04:46:22Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="1999" started-at="2018-07-21T04:46:20Z" finished-at="2018-07-21T04:46:22Z">
+      <class name="com.properties.App.ApiHittingAndAvailabilityTestCases">
+        <test-method status="PASS" signature="getAllRecords()[pri:0, instance:com.properties.App.ApiHittingAndAvailabilityTestCases@6b09bb57]" name="getAllRecords" duration-ms="1679" started-at="2018-07-21T04:46:20Z" finished-at="2018-07-21T04:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllRecords -->
+        <test-method status="PASS" signature="getByBotDomainIntId()[pri:0, instance:com.properties.App.ApiHittingAndAvailabilityTestCases@6b09bb57]" name="getByBotDomainIntId" duration-ms="48" started-at="2018-07-21T04:46:22Z" finished-at="2018-07-21T04:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getByBotDomainIntId -->
+        <test-method status="PASS" signature="getByBotIdRuleCode()[pri:0, instance:com.properties.App.ApiHittingAndAvailabilityTestCases@6b09bb57]" name="getByBotIdRuleCode" duration-ms="69" started-at="2018-07-21T04:46:22Z" finished-at="2018-07-21T04:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getByBotIdRuleCode -->
+        <test-method status="PASS" signature="getByBotIdRuleCodeChannelCode()[pri:0, instance:com.properties.App.ApiHittingAndAvailabilityTestCases@6b09bb57]" name="getByBotIdRuleCodeChannelCode" duration-ms="43" started-at="2018-07-21T04:46:22Z" finished-at="2018-07-21T04:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getByBotIdRuleCodeChannelCode -->
+        <test-method status="PASS" signature="getByBotIntId()[pri:0, instance:com.properties.App.ApiHittingAndAvailabilityTestCases@6b09bb57]" name="getByBotIntId" duration-ms="33" started-at="2018-07-21T04:46:22Z" finished-at="2018-07-21T04:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getByBotIntId -->
+        <test-method status="PASS" signature="getByChannelName()[pri:0, instance:com.properties.App.ApiHittingAndAvailabilityTestCases@6b09bb57]" name="getByChannelName" duration-ms="29" started-at="2018-07-21T04:46:22Z" finished-at="2018-07-21T04:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getByChannelName -->
+        <test-method status="PASS" signature="getByRuleCode()[pri:0, instance:com.properties.App.ApiHittingAndAvailabilityTestCases@6b09bb57]" name="getByRuleCode" duration-ms="25" started-at="2018-07-21T04:46:22Z" finished-at="2018-07-21T04:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getByRuleCode -->
+        <test-method status="PASS" signature="getByRuleType()[pri:0, instance:com.properties.App.ApiHittingAndAvailabilityTestCases@6b09bb57]" name="getByRuleType" duration-ms="34" started-at="2018-07-21T04:46:22Z" finished-at="2018-07-21T04:46:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getByRuleType -->
+      </class> <!-- com.properties.App.ApiHittingAndAvailabilityTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
