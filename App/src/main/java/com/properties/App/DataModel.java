@@ -9,6 +9,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+@Data
+@ToString
+@AllArgsConstructor
+@EqualsAndHashCode
 @Entity
 @Table(name="data")
 public class DataModel {
@@ -130,7 +134,16 @@ public class DataModel {
 	public void setRecUpdatedBy(String recUpdatedBy) {
 		this.recUpdatedBy = recUpdatedBy;
 	}
-
+	@Override
+	public String toString() {
+		return "DataModel [domain_rules_int_id=" + domain_rules_int_id + ", botIntId=" + botIntId + ", botDomainIntId="
+				+ botDomainIntId + ", channelName=" + channelName + ", ruleCode=" + ruleCode + ", ruleValue="
+				+ ruleValue + ", ruleType=" + ruleType + ", ruleDescription=" + ruleDescription + ", functionalityCode="
+				+ functionalityCode + ", subFunctionalityCode=" + subFunctionalityCode + ", channelCode=" + channelCode
+				+ ", recCreatedBy=" + recCreatedBy + ", recCreatedDate=" + recCreatedDate + ", recUpdatedDate="
+				+ recUpdatedDate + ", recUpdatedBy=" + recUpdatedBy + "]";
+	}
+	
 	
 	
 }
